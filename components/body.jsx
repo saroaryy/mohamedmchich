@@ -33,7 +33,7 @@ const services = [
 const servicesInDiv = services.map((current,index) => {
     return  <li key={index}>
                 <div>
-                    <img src="./img/dev-brands-solid.svg" alt="devicon" />
+                    <img src="../components/img/devicon.png" alt="devicon" className="devicon"/>
                 </div>
                 <div>
                     <h4>{current.title}</h4>
@@ -48,7 +48,6 @@ export default function Body(){
     return(
         <>
             <div className="body-container">
-            <img src="./img/" alt="devicon" />
                 {/* Navbar */}
                 <nav>
                     <ul>
