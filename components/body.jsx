@@ -1,10 +1,55 @@
 
+const services = [
+    {
+        title:`Machine Learning`,
+        desc:`I can help you develop and deploy machine learning models to solve real-world problems.`
+    },
+    {
+        title:`Data Engineering`,
+        desc:`I help you in designing, building, and maintaining the architecture, databases and large-scale processing systems.`
+    },
+    {
+        title:`DevOps`,
+        desc:`I can help you automate your software development and deployment process, making it more efficient and reliable.`
+    },
+    {
+        title:`Cloud`,
+        desc:`I can help you design and implement a cloud-based infrastructure that is scalable, secure, and cost-effective.`
+    },
+    {
+        title:`IT services delivery`,
+        desc:`The most modern and high-quality design made at a professional level.`
+    },
+    {
+        title:`Web Development`,
+        desc:`High-quality development of sites at the professional level.`
+    },
+    {
+        title:`Mobile Development`,
+        desc:`Professional development of applications for iOS and Android.`
+    }
+]
+
+const servicesInDiv = services.map((current,index) => {
+    return  <li key={index}>
+                <div>
+                    <img src="./img/dev-brands-solid.svg" alt="devicon" />
+                </div>
+                <div>
+                    <h4>{current.title}</h4>
+                    <p>{current.desc}</p>
+                </div>
+            </li>
+})
+
+
+
 export default function Body(){
     return(
         <>
             <div className="body-container">
-
-                /* Navbar */
+            <img src="./img/" alt="devicon" />
+                {/* Navbar */}
                 <nav>
                     <ul>
                         <button>About</button>
@@ -15,7 +60,8 @@ export default function Body(){
                     </ul>
                 </nav>
 
-                /* Body */
+                {/* Body */}
+
                 <h2>About Me</h2>
                 <section>
                     <p>
@@ -35,12 +81,15 @@ export default function Body(){
                     with a focus on cloud computing and project planning.
                     </p>
                 </section>
-
-                /* Add bellow the serivce and what you can provide */
+                
+                {
+                    /* Add bellow the serivce and what you can provide */
+                }
+                
                 <section>
                     <h3>what I'm Doing</h3>
                     <ul>
-                        <li></li>
+                        {servicesInDiv}
                     </ul>
                 </section>
 
